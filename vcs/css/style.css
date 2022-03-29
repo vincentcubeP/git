@@ -1,0 +1,28 @@
+.wrap {
+    width: 100%;
+}
+
+/* header section */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(34, 34, 34);
+}
+.hedaer {
+    margin: 0px auto;
+    max-width: 1440px;
+    height: 60px;
+}
+
+/* main section */
+.main {
+    margin: 0px auto;
+    max-width: 1440px;
+}
+
+
+/* footer section */
+footer {
+    margin: 0px auto;
+    max-width: 1440px;
+}
