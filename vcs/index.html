@@ -5,37 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent's Cube School</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="/vcs/static/css/reset.css">    
+    <link rel="stylesheet" href="/vcs/static/css/common.css">
+    <link rel="stylesheet" href="/vcs/static/css/style.css">
+    <script src="/vcs/static/js/includeHTML.js"></script>
 </head>
 <body>
     <div class="wrap">
-        <!-- header section -->
-        <header>
-            <div class="header margin">
-                <h1>
-                    <a href="index.html"><img src="img/vcs-logo-white.png" alt=""></a>
-                </h1>
-                <nav></nav>
-            </div>
-        </header>
-
-        <!-- main section -->
+        <header include-html="/vcs/header.html"></header>
         <div id="main">
             <div class="main margin">
                 <div class="main-logo margin">
-                    <img src="img/vcs-main-logo.png" alt="">
+                    <img src="/vcs/img/vcs-main-logo.png" alt="">
                 </div>
                 <div class="main-title margin">
-                    <p class="ko-title">빈센트의 큐브 스쿨</p>
+                    <p class="ko-title">빈센트<span>의</span> 큐브 스쿨</p>
                     <p class="en-title"><span>V</span>incent's <span>C</span>ube <span>S</span>chool</p>
                 </div>
             </div>
         </div>
-        
-        <!-- footer section -->
-        <footer></footer>
+        <footer include-html="/vcs/footer.html"></footer>
     </div>
 </body>
+<script>
+    includeHTML();
+</script>
 </html>
