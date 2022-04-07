@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent's Cube School</title>
+    <link rel="stylesheet" href="/vcs/static/css/reset.css">
+    <link rel="stylesheet" href="/vcs/static/css/common.css">
+    <link rel="stylesheet" href="/vcs/static/css/pll.css">    
+</head>
+<body>
+    <div class="wrap">
+        <header include-html="/vcs/header.html"></header>
+        <div id="main">
+            <div class="main margin">
+                <h2 class="title"><span>3x3x3</span> P<span>ermutation</span> L<span>ast</span> L<span>ayer</span></h2>
+                <div class="list-frame margin" id="pll-ua">
+                    <div class="list-name">Ua</div>
+                    <div class="list-image">
+                        <img class="img-1" src="/vcs/img/pll/PLL-Ua-1.png" alt="">
+                        <img class="img-2" src="/vcs/img/pll/PLL-Ua-2.png" alt="">
+                        <img class="img-3" src="/vcs/img/pll/PLL-Ua-3.png" alt="">
+                        <img class="img-4" src="/vcs/img/pll/PLL-Ua-4.png" alt="">
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg-frame alg-1" id="pll-ua-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg-frame alg-2" id="pll-ua-2">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>
+                        <div class="alg-frame alg-3" id="pll-ua-3">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg-frame alg-4" id="pll-ua-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="list-frame margin" id="pll-ub">
+                    <div class="list-name">Ub</div>
+                    <div class="list-image">
+                        <img class="img-1" src="/vcs/img/pll/PLL-Ub-1.png" alt="">
+                        <img class="img-2" src="/vcs/img/pll/PLL-Ub-2.png" alt="">
+                        <img class="img-3" src="/vcs/img/pll/PLL-Ub-3.png" alt="">
+                        <img class="img-4" src="/vcs/img/pll/PLL-Ub-4.png" alt="">
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg-frame alg-1" id="pll-ub-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg-frame alg-2" id="pll-ub-2">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>
+                        <div class="alg-frame alg-3" id="pll-ub-3">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg-frame alg-4" id="pll-ub-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+        <footer include-html="/vcs/footer.html"></footer>
+    </div>
+
+
+
+    <script src="/vcs/static/js/includeHTML.js"></script>
+    <!-- <script src="/vcs/static/js/animate.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+    <script>
+        includeHTML();
+    </script>
+    <script>
+        $(document).ready(function(){      
+            $(".img-2").show();      
+            $(".img-2").hide();
+            $(".img-3").hide();
+            $(".img-4").hide();            
+            $(".img-1").click(function(){
+                $(".img-2").animate(
+                {
+                    left:"200px",
+                }, 100);
+                $(".img-3").animate(
+                {
+                    left:"380px",
+                }, 100);
+                $(".img-4").animate(
+                {
+                    left:"560px",
+                }, 100);
+            }); 
+            // $(".img-1").click(function(){
+            //     $(".img-1").toggle(function(){
+            //         $(".img-2").animate(
+            //         {
+            //             left:"200px",
+            //         }, 100);
+            //         $(".img-3").animate(
+            //         {
+            //             left:"380px",
+            //         }, 100);
+            //         $(".img-4").animate(
+            //         {
+            //             left:"560px",
+            //         }, 100);
+            //     },
+            //     function(){
+            //         $(".img-2").animate(
+            //         {
+            //             left:"0",
+            //         }, 100);
+            //         $(".img-3").animate(
+            //         {
+            //             left:"0",
+            //         }, 100);
+            //         $(".img-4").animate(
+            //         {
+            //             left:"0",
+            //         }, 100);
+            //     });
+            // }); 
+            $(".img-1").click(function(){
+                $(".img-2").show(100);
+                $(".img-3").show(100);
+                $(".img-4").show(100);                 
+            });            
+        });
+    </script>
+    
+</body>
+
+</html>

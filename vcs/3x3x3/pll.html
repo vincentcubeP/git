@@ -7,25 +7,26 @@
     <title>Vincent's Cube School</title>
     <link rel="stylesheet" href="/vcs/static/css/reset.css">
     <link rel="stylesheet" href="/vcs/static/css/common.css">
-    <link rel="stylesheet" href="/vcs/static/css/pll.css">    
-    <script src="/vcs/static/js/includeHTML.js"></script>
+    <link rel="stylesheet" href="/vcs/static/css/pll.css">
 </head>
 <body>
     <div class="wrap">
         <header include-html="/vcs/header.html"></header>
         <div id="main">
             <div class="main margin">
-                <h2 class="title"><span>3x3x3</span> P<span>ermutation</span> L<span>ast</span> L<span>ayer</span></h2>
+                <h2 class="title"><span>3x3x3</span> PLL <span>(Permutation Last Layer)</span></h2>
                 <div class="list-frame margin" id="pll-ua">
                     <div class="list-name">Ua</div>
                     <div class="list-image">
-                        <img class="img-1" src="/vcs/img/pll/PLL-Ua-1.png" alt="">
-                        <img class="img-2" src="/vcs/img/pll/PLL-Ua-2.png" alt="">
-                        <img class="img-3" src="/vcs/img/pll/PLL-Ua-3.png" alt="">
-                        <img class="img-4" src="/vcs/img/pll/PLL-Ua-4.png" alt="">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Ua-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ua-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ua-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ua-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide()">&#10094;</a>
+                        <a class="next" onclick="nextSlide()">&#10095;</a>
                     </div>
                     <div class="list-alg">
-                        <div class="alg-frame alg-1" id="pll-ua-1">
+                        <div class="alg active" id="pll-ua-1">
                             <div>R2 U' R' U' R U R U R U' R</div>
                             <div>M2 U M' U2 M U M2</div>
                             <div>R U R' U R' U' R2 U' R' U R' U R</div>
@@ -33,15 +34,7 @@
                             <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
                             <div>M U2 M' U M U2 M' U M U2 M'</div>
                         </div>
-                        <div class="alg-frame alg-2" id="pll-ua-2">
-                            <div>R U' R U R U R U' R' U' R2</div>
-                            <div>M2 U M U2 M' U M2</div>
-                            <div>L2 U' L' U' L U L U L U' L</div>
-                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
-                            <div>M' U2 M U M' U2 M U M' U2 M</div>
-                            <div>F2 U' L R' F2 L' R U' F2</div>
-                        </div>
-                        <div class="alg-frame alg-3" id="pll-ua-3">
+                        <div class="alg" id="pll-ua-2">
                             <div>M2 u' M' u2 M' u' M2</div>
                             <div>R2 U' S' U2 S U' R2</div>
                             <div>R2 U S R2 S' R2 U' R2</div>
@@ -49,7 +42,15 @@
                             <div>R2 D' M' U2 M U2 D R2</div>
                             <div>R U2 R U R U R2 U' R' U' R2</div>
                         </div>
-                        <div class="alg-frame alg-4" id="pll-ua-4">
+                        <div class="alg" id="pll-ua-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-ua-4">
                             <div>M2 u' M' u2 M' u' M2</div>
                             <div>R2 U' S' U2 S U' R2</div>
                             <div>R2 U S R2 S' R2 U' R2</div>
@@ -59,12 +60,128 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class="list-frame margin" id="pll-ub">
+                    <div class="list-name">Ub</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Ub-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ub-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ub-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ub-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide()">&#10094;</a>
+                        <a class="next" onclick="nextSlide()">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-ua-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-ua-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-ua-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-ua-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
         <footer include-html="/vcs/footer.html"></footer>
     </div>
+
+
+
+    <script src="/vcs/static/js/includeHTML.js"></script>
+    <!-- <script src="/vcs/static/js/animate.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+    <script>
+        includeHTML();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".img,.alg").not(".active").hide(); //화면 로딩 후 첫번째 div를 제외한 나머지 숨김            
+        });
+        
+        //이전 슬라이드
+        
+        function prevSlide() {
+            $(".img").hide(); //모든 div 숨김           
+            var allSlide = $(".img"); //모든 div 객체를 변수에 저장 
+            var currentIndex = 0; //현재 나타난 슬라이드의 인덱스 변수        
+            //반복문으로 현재 active클래스를 가진 div를 찾아 index 저장
+            $(".img").each(function(index,item){ 
+                if($(this).hasClass("active")) {
+                    currentIndex = index;
+                }
+            });            
+            //새롭게 나타낼 div의 index
+            var newIndex = 0;
+            if(currentIndex <= 0) {
+                //현재 슬라이드의 index가 0인 경우 마지막 슬라이드로 보냄(무한반복)
+                newIndex = allSlide.length-1;
+            } else {
+                //현재 슬라이드의 index에서 한 칸 만큼 뒤로 간 index 지정
+                newIndex = currentIndex-1;
+            } 
+            //모든 div에서 active 클래스 제거            
+            $(".img").removeClass("active");
+            //새롭게 지정한 index번째 슬라이드에 active 클래스 부여 후 show()
+            $(".img").eq(newIndex).addClass("active");
+            $(".img").eq(newIndex).show();
+           
+       
+        }
+    
+   
+        //다음 슬라이드
+        
+        function nextSlide() {              
+            $(".img").hide();            
+            var allSlide = $(".img");
+            var currentIndex = 0;
+        
+            $(".img").each(function(index,item){
+                if($(this).hasClass("active")) {
+                    currentIndex = index;
+                }                
+            });
+           
+            var newIndex = 0;
+            
+            if(currentIndex >= allSlide.length-1) {
+                //현재 슬라이드 index가 마지막 순서면 0번째로 보냄(무한반복)
+                newIndex = 0;
+            } else {
+                //현재 슬라이드의 index에서 한 칸 만큼 앞으로 간 index 지정
+                newIndex = currentIndex+1;
+            }
+            $(".img").removeClass("active");
+            $(".img").eq(newIndex).addClass("active");
+            $(".img").eq(newIndex).show();
+        }    
+    </script>
+    
 </body>
-<script>
-    includeHTML();
-</script>
+
 </html>
