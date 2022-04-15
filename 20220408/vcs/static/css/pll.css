@@ -1,0 +1,215 @@
+#main {
+    margin-bottom: 60px;
+    padding-top: 60px;
+    width: 100%;
+}
+.main {
+    max-width: 1440px;
+}
+.title {
+    margin: 30px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+.title span {
+    font-size: 40px;
+    color: rgb(97, 97, 97);
+}
+.list-frame {    
+    width: 962px;
+    display: flex;  
+    border: 1px solid black; 
+}
+.list-name {
+    width: 80px;
+    height: 182px;
+    border-right: 1px solid black;
+    text-align: center;
+    line-height: 182px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.list-alg {
+    width: 700px;
+}
+.alg div {
+    padding-left: 15px;
+    width: 700px;
+    height: 30px;
+    border-bottom: 1px solid black;
+    line-height: 30px;
+    font-weight: 550;
+}
+.alg div:last-child {
+    border: none;
+}
+
+/* Slideshow */
+.list-image {
+    width: 182px;
+    height: 182px;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.list-image img {
+    width: 140px;
+    height: 140px;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;	
+    width: auto;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    }
+.prev {
+    left: 0;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.925);
+}
+
+
+/* 1024px */
+@media ( max-width: 1024px ) {
+    .title {
+        font-size: 40px;
+    }
+    .title span {
+        font-size: 30px;
+    }
+    .list-frame {
+        width: 760px;
+    }
+    .list-alg {
+        width: 516px;
+    }
+    .alg div {
+        width: 516px;
+    }
+}
+/* tablet */
+@media ( max-width: 780px ) {
+    .title {
+        font-size: 30px;
+    }
+    .title span {
+        font-size: 20px;
+    }
+    .list-frame {
+        width: 660px;
+    }
+    .list-name {
+        width: 60px;
+        height: 170px;
+        line-height: 170px;
+        font-size: 20px;
+    }
+    .list-alg {
+        width: 428px;
+    }
+    .alg div {
+        width: 428px; 
+        height: 28px;
+        font-size: 15px;
+        line-height: 28px;
+    }
+    .list-image {
+        width: 170px;
+        height: 170px;
+    }
+    .list-image img {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* mobile */
+@media ( max-width: 480px ) {
+    .title {
+        font-size: 30px;
+    }
+    .title span {
+        font-size: 20px;
+    }
+    .list-frame {
+        width: 440px;
+    }
+    .list-name {
+        width: 40px;
+        height: 120px;
+        line-height: 120px;
+        font-size: 16px;
+    }
+    .list-alg {
+        width: 280px;
+    }
+    .alg div {
+        width: 280px; 
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .list-image {
+        width: 120px;
+        height: 120px;
+    }
+    .list-image img {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media ( max-width: 320px ) {
+    .title {
+        font-size: 30px;
+    }
+    .title span {
+       display: none;
+    }
+    .list-frame {
+        width: 300px;
+        display: block;
+    }
+    .list-name {
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+    .list-alg {
+        width: 300px;
+    }
+    .alg div {
+        width: 300px; 
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .list-image {
+        width: 300px;
+        height: 120px;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+    .list-image img {
+        width: 100px;
+        height: 100px;
+    }
+}

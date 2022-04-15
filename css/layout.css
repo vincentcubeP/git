@@ -1,0 +1,364 @@
+.wrap {
+    width: 100%;
+}
+.margin {
+    margin: 0 auto;
+}
+
+/* header section */
+header {    
+    width: 100%;
+    height: 60px;
+    background-color: rgb(34, 34, 34);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.header {
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 60px;
+    display: flex;
+}
+.header div {
+    width: 120px;
+}
+h1 {
+    padding: 10px;      
+}
+h1 img {
+    width: 100px;
+    height: 40px;
+}
+
+/* menu section */
+.nav {
+    margin: 0 auto;
+}
+.menu {
+    margin: 0 auto;
+}
+.menu:after {
+    display: block; 
+    content: ''; 
+    clear: both;
+}
+.menu>li {
+    position: relative; 
+    float: left; 
+    margin: 0 20px;
+}
+.menu>li>a {
+    display: block; 
+    padding: 0 15px; 
+    height: 60px; 
+    line-height: 60px; 
+    color: #fff;
+    font-size: 20px;
+    font-weight: 550;
+    cursor: pointer;
+}
+.menu-sub {
+    display: none; 
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    text-align: center;
+}
+.menu-sub a {
+    display: block; 
+    padding: 10px 5px;
+    background: #666; 
+    color: rgb(252, 215, 8);
+    font-size: 16px;
+    font-weight: 550;
+}
+.menu>li:hover .menu-sub {
+    display: block;
+}
+
+/* hamburger */
+.menu-burger {
+    position: absolute;
+    z-index: 2;
+    /* top: 0;
+    right: 0px;
+    height: 100%;
+    max-width: 0;
+    transition: 0.5s ease;
+    background-color: rgb(87, 87, 87); */
+}
+.burger-icon {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    padding: 16px 0;
+    top: 10px;
+    right: 20px;
+    user-select: none;
+    width: auto;
+    margin: 0;
+}
+.burger-icon .burger-sticks {    
+    background: rgb(255, 255, 255);
+    display: block;
+    height: 4px;
+    position: relative;
+    transition: background .2s ease-out; 
+    width: 30px;
+}
+.burger-icon .burger-sticks:before, .burger-icon .burger-sticks:after {
+    background: rgb(255, 255, 255);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.burger-icon .burger-sticks:before {
+    top: 10px;
+}
+.burger-icon .burger-sticks:after {
+    top: -10px;
+}
+.burger-check {
+    display: none;
+}
+/* .burger-check:checked~.menu {
+    max-width: 200px;
+} */
+
+
+/* footer section */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(34, 34, 34);    
+}
+.footer {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1440px;
+    height: 100px;
+    color: white;
+    line-height: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* page */
+.title {
+    margin: 0 auto;    
+}
+.title p {
+    margin: 100px 0 50px;
+    color: gray;
+    font-size: 30px;
+    font-weight: 550;
+    text-align: center;
+}
+.title span {
+    color: black;
+    font-size: 50px;
+}
+.main {
+    margin-bottom: 40px;
+}
+
+/* list */
+.list-box {
+    margin: 0 auto;
+    width: 732px;
+    display: flex;
+    border: 1px solid black;
+}
+.list-name {
+    width: 80px;
+    height: 150px;
+    font-size: 20px;
+    font-weight: 550;
+    text-align: center;
+    line-height: 150px;
+    border: 1px solid black;
+}
+.list-img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    position: relative;
+}
+.list-img img {
+    width: 120px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+.list-alg div {
+    padding-left: 10px;
+    width: 500px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 30px;
+    border: 1px solid black;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;	
+    width: auto;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    }
+.prev {
+    left: 0;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.925);
+}
+
+
+
+/* 1024px */
+@media ( max-width: 1024px ) {
+    .header div {
+        display: none;
+    }
+}
+/* tablet */
+@media ( max-width: 780px ) {
+    .nav .menu {
+        height: 100vh;
+        top: 60px;
+        right: -180px;
+        text-align: right;
+        background: #666; 
+        position: absolute;
+        transition: 0.5s ease;
+    } 
+    .menu>li {
+       float: none;
+    }
+    .menu-sub {
+        display: block; 
+        position: relative; 
+        right: 0; 
+        text-align: right;
+    }
+    .menu-sub a {
+        display: block; 
+        padding: 10px 20px;
+        background: none; 
+        font-size: 16px;
+        font-weight: 550;
+    }
+    .burger-icon {
+        display: inline-block; 
+    }
+    .burger-check:checked ~ .nav .menu {
+        right: 0px;
+    }
+    .burger-check:checked ~ .burger-icon .burger-sticks {
+        background: transparent;
+    }
+    .burger-check:checked ~ .burger-icon .burger-sticks:before {
+        transform: rotate(-45deg);
+    }
+    .burger-check:checked ~ .burger-icon .burger-sticks:after {
+        transform: rotate(45deg);
+    }
+    .burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:before,
+    .burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:after {
+        top: 0;
+    }
+    /* list */
+    .list-box {
+        width: 682px;
+    }
+    .list-name {
+        width: 70px;
+        font-size: 20px;
+        font-weight: 550;
+    }
+    .list-alg div {
+        width: 460px;
+        font-size: 14px;
+    }
+}
+/* mobile */
+@media ( max-width: 480px ) {
+    /* page */
+    .title p {
+        font-size: 20px;
+    }
+    .title span {
+        font-size: 40px;
+    }
+     /* list */
+    .list-box {
+        width: 402px;
+        display: block;
+    }
+    .list-name {
+        width: 70px;
+        float: left;
+    }
+    .list-img {
+        width: 330px;
+        float: left;
+    }
+    .list-img img {
+        left: 105px;
+    }
+    .list-alg div {
+        width: 400px;
+        font-size: 14px;
+        clear: both;
+    }
+}
+@media ( max-width: 320px ) {
+     /* page */
+     .title p {
+        margin: 80px 0 30px;
+    }
+    .title span {
+        display: block;
+        font-size: 40px;
+    }
+     /* list */
+    .list-box {
+        width: 282px;
+    }
+    .list-name {
+        width: 60px;
+    }
+    .list-img {
+        width: 220px;
+        float: left;
+    }
+    .list-img img {
+        left: 50px;
+    }
+    .list-alg div {
+        width: 280px;
+        font-size: 10px;
+    }
+}

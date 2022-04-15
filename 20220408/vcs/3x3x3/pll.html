@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent's Cube School</title>
+    <link rel="stylesheet" href="/vcs/static/css/reset.css">
+    <link rel="stylesheet" href="/vcs/static/css/common.css">
+    <link rel="stylesheet" href="/vcs/static/css/pll.css"> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>   
+</head>
+<body>
+    <div class="wrap">
+        <header include-html="/vcs/header.html"></header>
+        <div id="main">
+            <div class="main margin">
+                <h2 class="title"><span>3x3x3</span> PLL <span>(Permutation Last Layer)</span></h2>
+                <div class="list-frame margin" id="pll-ua">
+                    <div class="list-name">Ua</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Ua-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ua-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ua-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ua-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-ua')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-ua')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-ua-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-ua-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-ua-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-ua-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-ub">
+                    <div class="list-name">Ub</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Ub-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ub-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ub-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ub-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-ub')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-ub')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-ub-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-ub-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-ub-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-ub-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-h">
+                    <div class="list-name">H</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-H.png" alt=""></div>                        
+                        <a class="prev" onclick="prevSlide('pll-h')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-h')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-h-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-z">
+                    <div class="list-name">Z</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Z-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Z-2.png" alt=""></div>                    
+                        <a class="prev" onclick="prevSlide('pll-z')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-z')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-z-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-z-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-aa">
+                    <div class="list-name">Aa</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Aa-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Aa-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Aa-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Aa-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-aa')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-aa')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-aa-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-aa-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-aa-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-aa-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-ab">
+                    <div class="list-name">Ab</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Ab-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ab-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ab-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ab-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-ab')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-ab')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-ab-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-ab-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-ab-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-ab-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-e">
+                    <div class="list-name">E</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-E-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-E-2.png" alt=""></div>                    
+                        <a class="prev" onclick="prevSlide('pll-e')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-e')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-e-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-e-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-t">
+                    <div class="list-name">T</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-T-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-T-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-T-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-T-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-t')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-t')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-t-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-t-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-t-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-t-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-f">
+                    <div class="list-name">F</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-F-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-F-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-F-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-F-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-f')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-f')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-f-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-f-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-f-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-f-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-ja">
+                    <div class="list-name">Ja</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Ja-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ja-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ja-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ja-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-ja')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-ja')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-ja-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-ja-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-ja-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-ja-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-jb">
+                    <div class="list-name">Jb</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Jb-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Jb-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Jb-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Jb-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-jb')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-jb')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-jb-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-jb-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-jb-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-jb-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-ra">
+                    <div class="list-name">Ra</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Ra-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ra-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ra-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ra-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-ra')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-ra')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-ra-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-ra-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-ra-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-ra-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-rb">
+                    <div class="list-name">Rb</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Rb-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Rb-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Rb-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Rb-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-rb')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-rb')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-rb-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-rb-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-rb-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-rb-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-y">
+                    <div class="list-name">Y</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Y-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Y-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Y-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Y-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-y')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-y')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-y-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-y-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-y-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-y-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-v">
+                    <div class="list-name">V</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-V-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-V-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-V-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-V-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-v')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-v')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-v-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-v-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-v-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-v-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-na">
+                    <div class="list-name">Na</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Na-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Na-2.png" alt=""></div>                        
+                        <a class="prev" onclick="prevSlide('pll-na')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-na')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-na-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-na-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-nb">
+                    <div class="list-name">Nb</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Nb-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Nb-2.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-nb')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-nb')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-nb-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-nb-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-ga">
+                    <div class="list-name">Ga</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Ga-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ga-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ga-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Ga-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-ga')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-ga')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-ga-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-ga-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-ga-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-ga-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-gb">
+                    <div class="list-name">Gb</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Gb-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gb-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gb-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gb-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-gb')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-gb')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-gb-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-gb-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-gb-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-gb-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-gc">
+                    <div class="list-name">Gc</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Gc-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gc-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gc-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gc-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-gc')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-gc')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-gc-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-gc-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-gc-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-gc-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-frame margin" id="pll-gd">
+                    <div class="list-name">Gd</div>
+                    <div class="list-image">
+                        <div class="img active"><img src="/vcs/img/pll/PLL-Gd-1.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gd-2.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gd-3.png" alt=""></div>
+                        <div class="img"><img src="/vcs/img/pll/PLL-Gd-4.png" alt=""></div>
+                        <a class="prev" onclick="prevSlide('pll-gd')">&#10094;</a>
+                        <a class="next" onclick="nextSlide('pll-gd')">&#10095;</a>
+                    </div>
+                    <div class="list-alg">
+                        <div class="alg active" id="pll-gd-1">
+                            <div>R2 U' R' U' R U R U R U' R</div>
+                            <div>M2 U M' U2 M U M2</div>
+                            <div>R U R' U R' U' R2 U' R' U R' U R</div>
+                            <div>L U' L U L U L U' L' U' L2</div>
+                            <div>R U R' U' L' U' L U2 R U' R' U' L' U L</div>
+                            <div>M U2 M' U M U2 M' U M U2 M'</div>
+                        </div>
+                        <div class="alg" id="pll-gd-2">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                        <div class="alg" id="pll-gd-3">
+                            <div>R U' R U R U R U' R' U' R2</div>
+                            <div>M2 U M U2 M' U M2</div>
+                            <div>L2 U' L' U' L U L U L U' L</div>
+                            <div>L U L' U L' U' L2 U' L' U L' U L</div>
+                            <div>M' U2 M U M' U2 M U M' U2 M</div>
+                            <div>F2 U' L R' F2 L' R U' F2</div>
+                        </div>                        
+                        <div class="alg" id="pll-gd-4">
+                            <div>M2 u' M' u2 M' u' M2</div>
+                            <div>R2 U' S' U2 S U' R2</div>
+                            <div>R2 U S R2 S' R2 U' R2</div>
+                            <div>R U R' U' R' U2 R U R U' R2 U2 R</div>
+                            <div>R2 D' M' U2 M U2 D R2</div>
+                            <div>R U2 R U R U R2 U' R' U' R2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer include-html="/vcs/footer.html"></footer>
+    </div>
+
+    <script type="text/javascript" src="/vcs/static/js/includeHTML.js"></script>
+    <script type="text/javascript" src="/vcs/static/js/slider.js"></script>    
+    <script>
+        includeHTML();
+        $(document).ready(function () {
+            $(".img,.alg").not(".active").hide(); //화면 로딩 후 첫번째 div를 제외한 나머지 숨김
+        });
+    </script>  
+</body>
+</html>
