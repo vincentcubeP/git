@@ -1,7 +1,7 @@
 .wrap {
     padding-top: 60px;
     width: 100%;
-    background-image: url("/img/main-bg.jpg");
+    background-image: url("../img/main-bg.jpg");
     background-repeat: no-repeat; 
     background-size: cover;
 }
