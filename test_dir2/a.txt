@@ -1,0 +1,14 @@
+합계 1804
+drwxrwxr-x 10 lys223 lys223   4096  4월 27 19:37 ./
+drwxrwxr-x  3 lys223 lys223   4096  4월 27 19:36 ../
+drwxrwxr-x  8 lys223 lys223   4096  4월 27 19:36 .git/
+drwxrwxr-x  4 lys223 lys223   4096  4월 27 19:36 20220408/
+drwxrwxr-x  2 lys223 lys223   4096  4월 27 19:36 css/
+drwxrwxr-x  5 lys223 lys223   4096  4월 27 19:36 html/
+drwxrwxr-x  5 lys223 lys223   4096  4월 27 19:36 img/
+-rw-rw-r--  1 lys223 lys223   1243  4월 27 19:36 index.html
+drwxrwxr-x  2 lys223 lys223   4096  4월 27 19:36 js/
+drwxrwxr-x  2 lys223 lys223   4096  4월 27 19:37 test_dir/
+drwxrwxr-x  2 lys223 lys223   4096  4월 27 19:37 test_dir2/
+-rw-rw-r--  1 lys223 lys223 898682  4월 27 19:36 vcs20220415.zip
+-rw-rw-r--  1 lys223 lys223 898923  4월 27 19:36 vcs20220422.zip
